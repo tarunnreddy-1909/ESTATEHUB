@@ -1,4 +1,4 @@
-# EstateHub – Presentation Notes
+# EstateHub – Presentation 
 
 ## 1. Project explanation
 EstateHub is a real estate property finder. Users can browse properties, filter them by
