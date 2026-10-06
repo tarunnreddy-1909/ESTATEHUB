@@ -1,54 +1,74 @@
-# EstateHub – Real Estate Property Finder (CIE-2 Mini Project)
+# EstateHub - Real Estate Property Finder
 
-React.js (Vite) frontend + Express.js backend. No database: properties are an in-memory array.
+EstateHub is a real estate website made using React.js and Express.js.  
+The main idea of the project is to make it easier for users to find properties in one place.
 
-## How to run (two terminals)
+Users can view properties, search and filter them, check property details, save favorites and send enquiries.
 
-Terminal 1 – backend (http://localhost:5000)
-    cd backend
-    npm install
-    npm start
+## Features
 
-Terminal 2 – frontend (http://localhost:5173)
-    cd frontend
-    npm install
-    npm run dev
+- View available properties
+- Search properties by location
+- Filter properties by Buy / Rent
+- Filter properties by price
+- Filter by property type and location
+- View property details
+- Add properties to Favorites
+- Sign In page
+- Send property enquiries
+- Responsive design for mobile and desktop
 
-Open http://localhost:5173 in the browser. Start the backend FIRST.
-Needs Node.js 18 or newer.
+## Technologies Used
 
-## Packages
-Backend : express, cors
-Frontend: react, react-dom, react-router-dom, vite, @vitejs/plugin-react
+### Frontend
+- React.js
+- JavaScript
+- React Router
+- HTML
+- CSS
+- Vite
 
-## Folder structure
-EstateHub/
-├── backend/
-│   ├── server.js                 starts Express, CORS, JSON, mounts routes
-│   ├── routes/propertyRoutes.js  GET /api/properties, GET /api/properties/:id
-│   ├── routes/enquiryRoutes.js   POST /api/enquiries (+ GET for demo)
-│   └── data/properties.js        8 sample properties
-└── frontend/
-    ├── index.html, vite.config.js, package.json
-    └── src/
-        ├── main.jsx              BrowserRouter + renders App
-        ├── App.jsx               routes + favorites state
-        ├── index.css             all styles (media queries at the bottom)
-        ├── components/  Navbar, Hero, SearchBar, FilterBar, PropertyCard, ContactForm, Footer
-        └── pages/       Home, Properties, PropertyDetails, About (class), Contact, Favorites
+### Backend
+- Node.js
+- Express.js
+- CORS
+- REST API
 
-## Property images
-Images are loaded from Unsplash URLs (needs internet). To use your own photos,
-put them in frontend/public/images/ and change the `image` field in
-backend/data/properties.js to "/images/yourfile.jpg".
+### Tools
+- VS Code
+- Git
+- GitHub
 
-## Student Modifications
-1. Buy / Rent / All filter   -> FilterBar.jsx + Properties.jsx (matchPurpose)
-2. Price range filter        -> FilterBar.jsx + Properties.jsx (priceMatches)
-(Location, type and keyword filters are extra.)
-Rent properties store the monthly rent as price, so they fall under "Under ₹50 Lakhs".
+## Pages
 
-## Quick test of the API (backend running)
-    http://localhost:5000/api/properties
-    http://localhost:5000/api/properties/2
-    http://localhost:5000/api/enquiries      (shows saved enquiries)
+- Home
+- Properties
+- Property Details
+- Favorites
+- About
+- Contact
+- Sign In
+
+## Project Structure
+
+```text
+EstateHub
+│
+├── backend
+│   ├── data
+│   ├── routes
+│   ├── server.js
+│   └── package.json
+│
+├── frontend
+│   ├── src
+│   │   ├── components
+│   │   ├── pages
+│   │   ├── App.jsx
+│   │   ├── main.jsx
+│   │   └── index.css
+│   ├── index.html
+│   └── package.json
+│
+├── PRESENTATION.md
+└── README.md
